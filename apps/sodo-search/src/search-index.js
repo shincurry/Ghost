@@ -10,28 +10,34 @@ export default class SearchIndex {
         });
 
         this.postsIndex = new Flexsearch.Document({
-            tokenize: 'forward',
+            tokenize: 'strict',
             document: {
                 id: 'id',
                 index: ['title', 'excerpt'],
                 store: true
-            }
+            },
+            // eslint-disable-next-line no-control-regex
+            encode: str => str.replace(/[\x00-\x7F]/g, '').split('')
         });
         this.authorsIndex = new Flexsearch.Document({
-            tokenize: 'forward',
+            tokenize: 'strict',
             document: {
                 id: 'id',
                 index: ['name'],
                 store: true
-            }
+            },
+            // eslint-disable-next-line no-control-regex
+            encode: str => str.replace(/[\x00-\x7F]/g, '').split('')
         });
         this.tagsIndex = new Flexsearch.Document({
-            tokenize: 'forward',
+            tokenize: 'strict',
             document: {
                 id: 'id',
                 index: ['name'],
                 store: true
-            }
+            },
+            // eslint-disable-next-line no-control-regex
+            encode: str => str.replace(/[\x00-\x7F]/g, '').split('')
         });
 
         this.init = this.init.bind(this);

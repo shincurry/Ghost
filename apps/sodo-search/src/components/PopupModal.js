@@ -117,7 +117,7 @@ function SearchBox() {
                     }
                 }}
                 className='grow -my-5 py-5 -ml-3 pl-3 text-[1.65rem] focus-visible:outline-none placeholder:text-gray-400 outline-none truncate'
-                placeholder='Search posts, tags and authors'
+                placeholder='搜索文章、标签和作者'
             />
             <Loading />
             <CancelButton />
@@ -210,7 +210,7 @@ function TagResults({tags, selectedResult, setSelectedResult}) {
     });
     return (
         <div className='border-t border-gray-200 py-3 px-4 sm:px-7'>
-            <h1 className='uppercase text-xs text-neutral-400 font-semibold mb-1 tracking-wide'>Tags</h1>
+            <h1 className='uppercase text-xs text-neutral-400 font-semibold mb-1 tracking-wide'>标签</h1>
             {TagItems}
         </div>
     );
@@ -392,7 +392,7 @@ function PostResults({posts, selectedResult, setSelectedResult}) {
     });
     return (
         <div className='border-t border-neutral-200 py-3 px-4 sm:px-7'>
-            <h1 className='uppercase text-xs text-neutral-400 font-semibold mb-1 tracking-wide'>Posts</h1>
+            <h1 className='uppercase text-xs text-neutral-400 font-semibold mb-1 tracking-wide'>文章</h1>
             {PostItems}
             <ShowMoreButton setMaxPosts={setMaxPosts} maxPosts={maxPosts} posts={posts} />
         </div>
@@ -453,7 +453,7 @@ function AuthorResults({authors, selectedResult, setSelectedResult}) {
 
     return (
         <div className='border-t border-neutral-200 py-3 px-4 sm:px-7'>
-            <h1 className='uppercase text-xs text-neutral-400 font-semibold mb-1 tracking-wide'>Authors</h1>
+            <h1 className='uppercase text-xs text-neutral-400 font-semibold mb-1 tracking-wide'>作者</h1>
             {AuthorItems}
         </div>
     );
