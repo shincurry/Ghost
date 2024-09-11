@@ -165,7 +165,7 @@ function CancelButton() {
                 });
             }}
         >
-            Cancel
+            取消
         </button>
     );
 }
